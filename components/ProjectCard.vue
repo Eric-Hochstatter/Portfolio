@@ -6,7 +6,7 @@
 		<img
 			:src="image"
 			:alt="title"
-			class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+			class="w-full h-80 object-cover transition-transform duration-500 scale-110 group-hover:scale-120"
 		/>
 
 		<!-- Overlay -->
@@ -40,3 +40,14 @@ defineProps({
 	tags: Array,
 });
 </script>
+
+<style scoped>
+.relative {
+	width: 100%;
+	height: 100%; /* Ensure the container takes the full height */
+}
+
+img {
+	display: block; /* Remove any default spacing around the image */
+}
+</style>

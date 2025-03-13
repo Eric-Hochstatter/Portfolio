@@ -8,23 +8,23 @@
 			<ProjectCard
 				image="/images/travello-titelbild.jpg"
 				title="Travello"
-				description="Entwicklung einer App"
+				description="Konzipierung einer App"
 				:tags="['UX-Research', 'Prototyping', 'App-Entwicklung']"
 				class="col-span-1 md:col-span-2"
 			/>
 
 			<ProjectCard
-				image="/images/focal.jpg"
+				image="/images/Focal-titelbild.jpg"
 				title="Focal"
 				description="Ein Konzept zum räumlichen Arbeiten"
-				:tags="['3D-Modelling', 'Interaction Design']"
+				:tags="['Interaction Design', 'Gesture control', 'VR/MR']"
 			/>
 
 			<ProjectCard
-				image="/images/celestial.jpg"
+				image="/images/CelestialBodies-titelbild.jpg"
 				title="Celestial Bodies"
 				description="Entwicklung einer interaktiven Ausstellung"
-				:tags="['AR/VR', 'Installation', 'Art Direction']"
+				:tags="['Arduino', 'Interaction', 'Exhibition']"
 			/>
 		</div>
 	</section>

@@ -10,7 +10,7 @@
 					class="w-10 h-10 icon"
 				/>
 				<div
-					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity"
+					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity text-xs"
 				>
 					Pflanzen
 				</div>
@@ -24,7 +24,7 @@
 					class="w-10 h-10 icon"
 				/>
 				<div
-					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity"
+					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity text-xs"
 				>
 					Fotografie
 				</div>
@@ -38,7 +38,7 @@
 					class="w-10 h-10 icon"
 				/>
 				<div
-					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity"
+					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity text-xs"
 				>
 					Kochen
 				</div>
@@ -52,7 +52,7 @@
 					class="w-10 h-10 icon"
 				/>
 				<div
-					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity"
+					class="hover-text absolute inset-0 flex items-center justify-center text-white text-center p-2 opacity-0 hover:opacity-100 transition-opacity text-xs"
 				>
 					Reisen
 				</div>
