@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+:root {
+	--color-default: initial;
+	--color-green: #2f855a;
+	--color-darkgreen: #1c5337;
+	--color-midnight: #121063;
+	--color-tahiti: #3ab7bf;
+	--color-bermuda: #78dcca;
+}

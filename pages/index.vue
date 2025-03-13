@@ -9,6 +9,14 @@
 	</div>
 </template>
 
-<script></script>
+<script>
+import ProjectCard from "~/components/ProjectCard.vue";
+
+export default {
+	components: {
+		ProjectCard,
+	},
+};
+</script>
 
 <style></style>
