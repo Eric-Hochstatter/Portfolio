@@ -17,7 +17,7 @@
 
 			<!-- Floating Menu: Fixiert rechts -->
 			<div class="fixed right-5 top-1/2 transform -translate-y-1/2">
-				<FloatingMenu />
+				<FloatingMenu @scrollToProjects="scrollToProjects" />
 			</div>
 
 			<!-- PROJECT PREVIEW: Nimmt alle 10 Spalten ein -->
@@ -40,12 +40,17 @@ import AboutSection from "@/components/AboutSection.vue";
 import HobbyCard from "@/components/HobbyCard.vue";
 import ProjectPreview from "@/components/ProjectPreview.vue";
 import FloatingMenu from "@/components/FloatingMenu.vue";
+import { ref } from "vue";
 
 // Reference für den Scrollbereich
 const projectsSection = ref(null);
 
 const scrollToProjects = () => {
-	projectsSection.value?.scrollIntoView({ behavior: "smooth" });
+	if (projectsSection.value) {
+		projectsSection.value.scrollIntoView({ behavior: "smooth" });
+	} else {
+		console.error("projectsSection reference is not set!");
+	}
 };
 </script>
 

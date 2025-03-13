@@ -2,19 +2,29 @@
 	<div
 		class="fixed right-5 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2"
 	>
-		<!-- Erster Button -->
-		<button class="floating-btn">
+		<!-- Erster Button (Scroll zum oberen Rand der Seite) -->
+		<button class="floating-btn" @click="scrollToTop">
 			<img src="/images/User.svg" alt="User Icon" class="w-6 h-6" />
 		</button>
 
 		<!-- Zweiter Button (Scroll zu Projekten) -->
-		<button class="floating-btn" @click="$emit('scrollToProjects')">
+		<button class="floating-btn" @click="handleScrollToProjects">
 			<img src="/images/Projects.svg" alt="Grid Icon" class="w-6 h-6" />
 		</button>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+const emit = defineEmits(["scrollToProjects"]);
+
+const scrollToTop = () => {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const handleScrollToProjects = () => {
+	emit("scrollToProjects");
+};
+</script>
 
 <style scoped>
 .floating-btn {
