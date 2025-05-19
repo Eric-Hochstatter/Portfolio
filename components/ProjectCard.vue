@@ -1,6 +1,10 @@
 // components/ProjectCard.vue
 <template>
-  <div class="relative overflow-hidden group" :class="cardHeight">
+  <NuxtLink 
+    :to="projectPath" 
+    class="relative overflow-hidden group block"
+    :class="cardHeight"
+  >
     <!-- Bild -->
     <img 
       :src="image" 
@@ -32,7 +36,7 @@
         </span>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup>
@@ -41,10 +45,18 @@ const props = defineProps({
   subtitle: String,
   image: String,
   tags: Array,
+  projectSlug: {
+    type: String,
+    required: true
+  },
   fullWidth: {
     type: Boolean,
     default: false
   }
+});
+
+const projectPath = computed(() => {
+  return `/projects/${props.projectSlug}`;
 });
 
 const cardHeight = computed(() => {

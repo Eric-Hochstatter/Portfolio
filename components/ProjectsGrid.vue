@@ -11,6 +11,7 @@
           image="/images/projects/travello-titelbild.jpg"
           title="travello"
           subtitle="Konzeptentwicklung einer App"
+          projectSlug="travello"
           :tags="['UX-Research', 'Prototyping', 'App-Entwicklung']"
         />
       </div>
@@ -21,6 +22,7 @@
           title="Celestial Bodies"
           subtitle="Interaktives Ausstellungskonzept"
           image="/images/projects/CelestialBodies-titelbild.jpg"
+          projectSlug="celestial-bodies"
           :tags="['Arduino', 'Interaction', 'Exhibition']"
         />
       </div>
@@ -31,6 +33,7 @@
           title="Focal"
           subtitle="Konzept für räumliches arbeiten"
           image="/images/projects/Focal-titelbild.jpg"
+          projectSlug="focal"
           :tags="['Interaction Design', 'Gesture control', 'VR/MR']"
         />
       </div>
@@ -41,6 +44,7 @@
           title="comigo"
           subtitle="Design-Sprint"
           image="/images/projects/comigo-titelbild.jpg"
+          projectSlug="comigo"
           :tags="['Design Sprint', 'App-Entwicklung', 'UX-Research']"
         />
       </div>
