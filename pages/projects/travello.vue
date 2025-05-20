@@ -16,17 +16,21 @@
       <!-- Header-Bereich: zwei separate Kacheln nebeneinander -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-8">
         <!-- Linke Kachel: Projekttitel und Beschreibung -->
-        <div class="md:col-span-8 bg-white rounded-lg shadow-sm p-12">
-          <h1 class="text-5xl font-bold mb-2">travello</h1>
-          <p class="text-2xl mb-12">Die smarte Art, gemeinsam zu reisen!</p>
+        <div class="md:col-span-8 bg-white rounded-lg shadow-sm p-12 flex flex-col h-full">
+          <div>
+            <h1 class="text-5xl font-bold mb-2">travello</h1>
+            <p class="text-2xl mb-12">Die smarte Art, gemeinsam zu reisen!</p>
+          </div>
           
-          <p class="mt-8 text-base">
-            Mit travello wird die Reiseplanung in der Gruppe einfacher gestaltet. Keine endlosen Chats, keine Missverständnisse – stattdessen werden eure Wünsche gebündelt. Inspiration entdecken, Ideen sammeln, abstimmen und automatisch einen individuellen Tagesplan erhalten. Verschafft euch mit travello einen klaren Überblick über die besten Spots und gestaltet eine Planung, die wirklich zu euch passt!
-          </p>
+          <div class="mt-auto"> <!-- Margin-bottom entfernt, damit Text genau unten abschließt -->
+            <p class="text-base">
+              Mit travello wird die Reiseplanung in der Gruppe einfacher gestaltet. Keine endlosen Chats, keine Missverständnisse – stattdessen werden eure Wünsche gebündelt. Inspiration entdecken, Ideen sammeln, abstimmen und automatisch einen individuellen Tagesplan erhalten. Verschafft euch mit travello einen klaren Überblick über die besten Spots und gestaltet eine Planung, die wirklich zu euch passt!
+            </p>
+          </div>
         </div>
         
         <!-- Rechte Kachel: Projektinfos -->
-        <div class="md:col-span-4 bg-white rounded-lg shadow-sm p-12">
+        <div class="md:col-span-4 bg-white rounded-lg shadow-sm p-12 flex flex-col h-full">
           <div class="space-y-8">
             <!-- Projektdauer -->
             <div>
@@ -94,22 +98,22 @@
         <!-- Grid ähnlich wie in ProjectsGrid.vue -->
         <div class="grid grid-cols-1 md:grid-cols-6 gap-6" style="grid-template-rows: auto auto;">
           <!-- Obere Reihe: Logo-Screen (breiter) und Inspirationsseite -->
-          <div class="md:col-span-4 md:row-span-1 bg-white rounded-lg overflow-hidden h-80">
-            <!-- <img src="/images/projects/travello-screens.jpg" alt="Travello Startbildschirm" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" /> -->
+          <div class="md:col-span-4 md:row-span-1 bg-white rounded-lg overflow-hidden h-full">
+            <img src="/images/projects/travello/Startscreen.png" alt="Travello Startbildschirm" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" />
           </div>
           
           <!-- Rechte Seite: Screenshot über 2 Reihen -->
           <div class="md:col-span-2 md:row-span-1 bg-white rounded-lg overflow-hidden h-full">
-            <!-- <img src="/images/projects/travello-screens.jpg" alt="Travello Inspirationsseite" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" /> -->
+            <img src="/images/projects/travello/Inspiration.png" alt="Travello Inspirationsseite" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" />
           </div>
           
           <!-- Untere Reihe: Zwei gleichgroße Screenshots nebeneinander -->
           <div class="md:col-span-2 bg-white rounded-lg overflow-hidden aspect-square">
-            <!-- <img src="/images/projects/travello-screens.jpg" alt="Travello Detailansicht" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" /> -->
+            <img src="/images/projects/travello/Abstimmung.png" alt="Travello Detailansicht" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" />
           </div>
           
-          <div class="md:col-span-4 md:row-span-1 bg-white rounded-lg overflow-hidden h-80">
-            <!-- <img src="/images/projects/travello-screens.jpg" alt="Travello Nutzer" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" /> -->
+          <div class="md:col-span-4 md:row-span-1 bg-white rounded-lg overflow-hidden h-full">
+            <img src="/images/projects/travello/drei-Freunde.png" alt="Travello Nutzer" class="w-full h-full object-cover" onerror="this.src='/images/placeholder.jpg'" />
           </div>
         </div>
       </div>
@@ -143,7 +147,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Celestial Bodies -->
           <div class="overflow-hidden rounded-lg shadow-sm relative group h-64">
-            <img src="/images/projects/CelestialBodies-titelbild.jpg" alt="Celestial Bodies" class="w-full h-full object-cover transition-transform duration-500 scale-110 group-hover:scale-120" />
+            <img src="/images/projects/CelestialBodies-titelbild.jpg" alt="Celestial Bodies" class="w-full h-full object-cover transition-transform duration-500 scale-110 group-hover:scale-120" style="object-position: center 25%;" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div class="absolute bottom-0 left-0 p-4 text-white z-10">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500">

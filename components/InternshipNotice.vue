@@ -4,11 +4,11 @@
   <section class="relative bg-white rounded-lg shadow-sm p-12 mx-auto max-w-9xl">
     <!-- Hero Content -->
     <h1 class="text-5xl font-bold mb-12">
-      Das War's!
+      Das war's!
     </h1>
 
     <p class="max-w-2xl text-xl font-medium text-gray-800 text-left leading-relaxed mt-32 mb-6">
-      Ab Herbst '25 suche ich nach einer Praktikumsstelle um mein Wissen zu erweitern. Melde dich gerne bei mir!
+      Wenn du mehr über meine Projekte erfahren möchtest, kontaktiere mich gerne. Ich freue mich über eine Nachricht!
     </p>
 
     <!-- Kontakt Links -->
@@ -34,7 +34,7 @@
     <!-- Trennstrich und "Designed by"-Hinweis -->
     <div class="footer-divider">
       <div class="divider"></div>
-      <p class="designed-by">Design & Development by Eric Hochstatter © 2025</p>
+      <p class="designed-by">Desiged & Coded 2025 by © Eric Hochstatter</p>
     </div>
   </section>
 </template>
