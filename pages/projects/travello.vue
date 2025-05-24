@@ -42,13 +42,13 @@
             </div>
             
             <!-- Team -->
-            <div>
-              <h3 class="text-lg font-semibold mb-2">Team</h3>
-              <p>
-                Lea Ullmann,<br>
-                Yasmin Hähnel
-              </p>
-            </div>
+           <div>
+  <h3 class="text-lg font-semibold mb-2">Team</h3>
+  <p>
+    <a href="https://leaullmann.de/" target="_blank" rel="noopener noreferrer" class="team-link">Lea Ullmann</a>,<br>
+    <a href="https://yasminhaehnel.com/" target="_blank" rel="noopener noreferrer" class="team-link">Yasmin Hähnel</a>
+  </p>
+</div>
             
             <!-- Tools -->
             <div>
@@ -75,7 +75,7 @@
         <!-- Wireframes-Bereich ohne Kachel, direkt auf Hintergrund -->
       <div class="mt-16 mb-16">
         <img 
-          src="/images/projects/Hobbys.png" 
+          src="/images/projects/travello/Travello-Skizzen.png" 
           alt="travello Wireframes" 
           class="w-full max-w-6xl mx-auto" 
           onerror="this.src='/images/placeholder.jpg'" 
@@ -195,7 +195,7 @@
 
 <style scoped>
 .bg-beige {
-  background-color: #f8f8f1;
+  background-color: #F2F2F2;
 }
 
 .back-link {
@@ -207,5 +207,17 @@
 
 .back-link:hover svg {
   transform: translateX(-4px);
+}
+
+/* Styling für Team-Links */
+.team-link {
+  color: #2f855a; /* Grüne Farbe, passend zum Rest deiner Seite */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.team-link:hover {
+  color: #1c5337; /* Dunkleres Grün beim Hover */
+  text-decoration: underline;
 }
 </style>

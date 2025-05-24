@@ -32,6 +32,6 @@ import FloatingMenu from "@/components/FloatingMenu.vue";
 
 <style scoped>
 .bg-beige {
-	background-color: #f8f8f1;
+	background-color: #F2F2F2;
 }
 </style>
