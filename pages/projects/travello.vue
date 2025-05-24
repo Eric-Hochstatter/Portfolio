@@ -63,12 +63,44 @@
         </div>
       </div>
 
-      <!-- Logo und Hauptbild Bereich (ähnlich wie im Screenshot) -->
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-6">
-        
-        <!-- Screenshot rechte Seite -->
-        <div class="md:col-span-12 bg-white rounded-lg overflow-hidden h-full">
-          <img src="/images/projects/travello-titelbild.jpg" alt="travello App Screenshot" class="w-full h-full object-cover" />
+      <!-- Video-Bereich mit Click-to-Play (ersetzt das Hauptbild) -->
+      <div class="mt-8">
+        <div class="video-container relative overflow-hidden rounded-lg bg-white">
+          <!-- Vorschaubild (wird beim Klick ausgeblendet) -->
+          <img 
+            v-show="!videoPlaying"
+            src="/images/projects/travello-titelbild.jpg" 
+            alt="travello App Screenshot" 
+            class="w-full h-full object-cover cursor-pointer transition-opacity duration-500" 
+            @click="startVideo"
+          />
+          
+          <!-- Play-Button Icon (nur sichtbar, wenn Video nicht spielt) -->
+          <div 
+            v-show="!videoPlaying"
+            class="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+            @click="startVideo"
+          >
+            <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition-all duration-300">
+              <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- YouTube Video (wird beim Klick sichtbar) -->
+          <div v-show="videoPlaying" class="w-full">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              :src="videoSrc" 
+              title="travello App Demo" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              class="w-full aspect-video"
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -126,63 +158,41 @@
         </p>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div>
             <h3 class="font-bold mb-2">Nutzerorientierter Design-Prozess</h3>
             <p class="text-sm">Durch intensive Nutzerbefragungen haben wir gelernt, wie wichtig die Einbeziehung der Zielgruppe in jeder Phase ist.</p>
           </div>
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div>
             <h3 class="font-bold mb-2">Gruppenentscheidungen effektiv gestalten</h3>
             <p class="text-sm">Die Entwicklung von demokratischen Abstimmungsmechanismen verhindert Konflikte und steigert die Zufriedenheit.</p>
           </div>
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div>
             <h3 class="font-bold mb-2">Balance zwischen Struktur und Flexibilität</h3>
             <p class="text-sm">Ein guter Reiseplan bietet Orientierung, lässt aber auch Raum für spontane Entscheidungen.</p>
           </div>
         </div>
       </div>
 
-      <!-- Weitere Projekte -->
+      <!-- Nächstes Projekt -->
       <div class="mt-12 bg-white rounded-lg shadow-sm p-12">
-        <h2 class="text-2xl font-bold mb-6">Weitere Projekte</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Celestial Bodies -->
-          <div class="overflow-hidden rounded-lg shadow-sm relative group h-64">
-            <img src="/images/projects/CelestialBodies-titelbild.jpg" alt="Celestial Bodies" class="w-full h-full object-cover transition-transform duration-500 scale-110 group-hover:scale-120" style="object-position: center 25%;" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 p-4 text-white z-10">
-              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 class="text-xl font-bold">Celestial Bodies</h3>
-                <p class="text-sm font-medium opacity-90">Interaktives Ausstellungskonzept</p>
-              </div>
+        <div class="flex justify-between items-end">
+          <div>
+            <h2 class="text-5xl font-bold text-black">Nächstes Projekt</h2>
+            <h3 class="text-2xl font-medium text-green-700 mt-10">Celestial Bodies</h3>
+            <p class="text-lg text-gray-700 mt-2">Interaktives Ausstellungskonzept</p>
+            
+            <!-- Tags -->
+            <div class="flex gap-2 mt-4">
+              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Arduino</span>
+              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Interaction</span>
+              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Exhibition</span>
             </div>
-            <NuxtLink to="/projects/celestial-bodies" class="absolute inset-0 z-20"></NuxtLink>
           </div>
-
-          <!-- Focal -->
-          <div class="overflow-hidden rounded-lg shadow-sm relative group h-64">
-            <img src="/images/projects/Focal-titelbild.jpg" alt="Focal" class="w-full h-full object-cover transition-transform duration-500 scale-110 group-hover:scale-120" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 p-4 text-white z-10">
-              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 class="text-xl font-bold">Focal</h3>
-                <p class="text-sm font-medium opacity-90">Konzept für räumliches arbeiten</p>
-              </div>
-            </div>
-            <NuxtLink to="/projects/focal" class="absolute inset-0 z-20"></NuxtLink>
-          </div>
-
-          <!-- comigo -->
-          <div class="overflow-hidden rounded-lg shadow-sm relative group h-64">
-            <img src="/images/projects/comigo-titelbild.jpg" alt="comigo" class="w-full h-full object-cover transition-transform duration-500 scale-110 group-hover:scale-120" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 p-4 text-white z-10">
-              <div class="opacity-0 group-hover:opacity-100 transition-city duration-500">
-                <h3 class="text-xl font-bold">comigo</h3>
-                <p class="text-sm font-medium opacity-90">Design-Sprint</p>
-              </div>
-            </div>
-            <NuxtLink to="/projects/comigo" class="absolute inset-0 z-20"></NuxtLink>
-          </div>
+          <NuxtLink to="/projects/celestial-bodies" class="project-arrow-link bg-green-700 hover:bg-green-800 text-white w-16 h-16 rounded-full transition flex items-center justify-center">
+            <svg class="arrow-icon w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -190,7 +200,20 @@
 </template>
 
 <script setup>
-// Keine externen Komponenten nötig, da alles inline ist
+// Reactive state für Video-Wiedergabe
+const videoPlaying = ref(false);
+
+// YouTube-Video URL mit Autoplay-Parameter
+const videoSrc = computed(() => {
+  return videoPlaying.value 
+    ? 'https://www.youtube.com/embed/e4DJAY-LbLo?autoplay=1&rel=0' 
+    : '';
+});
+
+// Funktion zum Starten des Videos
+const startVideo = () => {
+  videoPlaying.value = true;
+};
 </script>
 
 <style scoped>
@@ -219,5 +242,28 @@
 .team-link:hover {
   color: #1c5337; /* Dunkleres Grün beim Hover */
   text-decoration: underline;
+}
+
+/* Styling für den Video-Container */
+.video-container {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.video-container img,
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover-Effekt für den Projekt-Pfeil */
+.project-arrow-link:hover .arrow-icon {
+  transform: rotate(45deg);
+  stroke: black;
 }
 </style>

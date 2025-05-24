@@ -16,7 +16,7 @@
         <img
           src="/images/its-me.jpeg"
           alt="Eric"
-          class="hidden absolute rounded-full w-20 h-20"
+          class="profile-image absolute rounded-full w-20 h-20"
         />
       </span>!
     </h1>
@@ -56,18 +56,71 @@
   text-underline-offset: 4px;
 }
 
-.highlight:hover img {
-  display: block;
-}
-
-.highlight img {
+/* Profilbild Animation */
+.profile-image {
   display: none;
   position: absolute;
   top: 70px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-20px);
   border: 2px solid white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* Hover-Effekt auf "Eric" */
+.highlight:hover .profile-image {
+  display: block;
+  opacity: 1;
+  animation: bounceDown 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Bounce-Down Animation */
+@keyframes bounceDown {
+  0% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) translateY(25px);
+    opacity: 1;
+  }
+  65% {
+    transform: translateX(-50%) translateY(15px);
+  }
+  80% {
+    transform: translateX(-50%) translateY(22px);
+  }
+  90% {
+    transform: translateX(-50%) translateY(18px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+}
+
+/* Alternative elegante Swing-Animation (falls du diese bevorzugst) */
+@keyframes elegantSwing {
+  0% {
+    transform: translateX(-50%) translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(-50%) translateY(25px) scale(1.05);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-50%) translateY(15px) scale(0.98);
+  }
+  80% {
+    transform: translateX(-50%) translateY(22px) scale(1.02);
+  }
+  100% {
+    transform: translateX(-50%) translateY(20px) scale(1);
+    opacity: 1;
+  }
 }
 
 /* Knopfstil aus der Navigation.vue */
