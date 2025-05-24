@@ -63,6 +63,18 @@
         </div>
       </div>
 
+      
+
+        <!-- Wireframes-Bereich ohne Kachel, direkt auf Hintergrund -->
+      <div class="mt-16 mb-16">
+        <img 
+          src="/images/projects/travello/Travello-Skizzen.png" 
+          alt="travello Wireframes" 
+          class="w-full max-w-6xl mx-auto" 
+          onerror="this.src='/images/placeholder.jpg'" 
+        />
+      </div>
+
       <!-- Video-Bereich mit Click-to-Play (ersetzt das Hauptbild) -->
       <div class="mt-8">
         <div class="video-container relative overflow-hidden rounded-lg bg-white">
@@ -104,16 +116,6 @@
         </div>
       </div>
 
-        <!-- Wireframes-Bereich ohne Kachel, direkt auf Hintergrund -->
-      <div class="mt-16 mb-16">
-        <img 
-          src="/images/projects/travello/Travello-Skizzen.png" 
-          alt="travello Wireframes" 
-          class="w-full max-w-6xl mx-auto" 
-          onerror="this.src='/images/placeholder.jpg'" 
-        />
-      </div>
-
       <!-- Projektbeschreibung -->
       <div class="mt-8 bg-white rounded-lg shadow-sm p-12">
         <h2 class="text-2xl font-bold mb-6">Erstelle einen gemeinsamen Trip!</h2>
@@ -152,49 +154,56 @@
 
       <!-- Erlerntes -->
       <div class="mt-12 bg-white rounded-lg shadow-sm p-12">
-        <h2 class="text-2xl font-bold mb-6">Erlerntes</h2>
-        <p class="mb-6">
+        <h2 class="text-2xl font-bold mb-6">Erlerntes & genutztes</h2>
+        <!-- <p class="mb-6">
           Mit travello wird die Reiseplanung in der Gruppe einfacher gestaltet: Keine endlosen Chats, keine Missverständnisse – stattdessen werden eure Wünsche gebündelt, Inspiration entdecken, Ideen sammeln, abstimmen und automatisch einen praktikablen Tagesplan erstellen. Verschafft euch mit travello einen klaren Überblick über die besten Spots und gestaltet eine Planung, die wirklich zu euch passt!
-        </p>
+        </p> -->
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+         
+          <div>
+            <h3 class="font-bold mb-2">Einführung eines Design-Tagebuchs</h3>
+            <p class="text-sm">Mit der Einführung eines Design-Tagebuchs schufen wir eine klare Dokumentation aller Prozessschritte & Designentscheidungen.</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2">Erstellung einer Component Library</h3>
+            <p class="text-sm">Um den wachsenden Prototyp übersichtlich und einheitlich zu halten, entwickelten wir eine klar organisierte Component Library.</p>
+          </div>
           <div>
             <h3 class="font-bold mb-2">Nutzerorientierter Design-Prozess</h3>
             <p class="text-sm">Durch intensive Nutzerbefragungen haben wir gelernt, wie wichtig die Einbeziehung der Zielgruppe in jeder Phase ist.</p>
-          </div>
-          <div>
-            <h3 class="font-bold mb-2">Gruppenentscheidungen effektiv gestalten</h3>
-            <p class="text-sm">Die Entwicklung von demokratischen Abstimmungsmechanismen verhindert Konflikte und steigert die Zufriedenheit.</p>
-          </div>
-          <div>
-            <h3 class="font-bold mb-2">Balance zwischen Struktur und Flexibilität</h3>
-            <p class="text-sm">Ein guter Reiseplan bietet Orientierung, lässt aber auch Raum für spontane Entscheidungen.</p>
           </div>
         </div>
       </div>
 
       <!-- Nächstes Projekt -->
-      <div class="mt-12 bg-white rounded-lg shadow-sm p-12">
-        <div class="flex justify-between items-end">
-          <div>
-            <h2 class="text-5xl font-bold text-black">Nächstes Projekt</h2>
-            <h3 class="text-2xl font-medium text-green-700 mt-10">Celestial Bodies</h3>
-            <p class="text-lg text-gray-700 mt-2">Interaktives Ausstellungskonzept</p>
-            
-            <!-- Tags -->
-            <div class="flex gap-2 mt-4">
-              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Arduino</span>
-              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Interaction</span>
-              <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Exhibition</span>
-            </div>
-          </div>
-          <NuxtLink to="/projects/celestial-bodies" class="project-arrow-link bg-green-700 hover:bg-green-800 text-white w-16 h-16 rounded-full transition flex items-center justify-center">
-            <svg class="arrow-icon w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </NuxtLink>
-        </div>
+<div class="mt-12 bg-white rounded-lg shadow-sm p-12 pb-16 relative">
+  <div class="flex justify-between items-end">
+    <div>
+      <h2 class="text-5xl font-bold text-black">Nächstes Projekt</h2>
+      <h3 class="text-2xl font-medium text-green-700 mt-10">Celestial Bodies</h3>
+      <p class="text-lg text-gray-700 mt-2">Interaktives Ausstellungskonzept</p>
+      
+      <!-- Tags -->
+      <div class="flex gap-2 mt-4">
+        <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Arduino</span>
+        <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Interaction</span>
+        <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Exhibition</span>
       </div>
+    </div>
+    <NuxtLink to="/projects/celestial-bodies" class="project-arrow-link text-white w-12 h-12 rounded-full transition flex items-center justify-center">
+      <svg class="arrow-icon w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
+    </NuxtLink>
+  </div>
+
+  <!-- Trennstrich und "Designed by"-Hinweis -->
+  <div class="footer-divider">
+    <div class="divider"></div>
+    <p class="designed-by">Designed & Coded 2025 by © Eric Hochstatter</p>
+  </div>
+</div>
     </div>
   </div>
 </template>
@@ -217,6 +226,7 @@ const startVideo = () => {
 </script>
 
 <style scoped>
+
 .bg-beige {
   background-color: #F2F2F2;
 }
@@ -261,9 +271,47 @@ const startVideo = () => {
   object-fit: cover;
 }
 
+/* Footer-Divider Styles (aus InternshipNotice.vue übernommen) */
+.footer-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  text-align: center;
+
+}
+
+.divider {
+  height: 1px;
+  background-color: #e2e8f0; /* Ein dezentes Grau */
+  margin-bottom: 0.75rem;
+  margin-left: 32px;
+  margin-right: 32px;
+
+}
+
+.designed-by {
+  font-size: 0.75rem;
+  color: #94a3b8; /* Ein dezentes Grau für den Text */
+  font-weight: 400;
+}
+
 /* Hover-Effekt für den Projekt-Pfeil */
+.project-arrow-link {
+  background-color: black; /* Standardfarbe: schwarz */
+  transition: all 0.3s ease; /* Sanfte Übergänge für alle Eigenschaften */
+}
+
+.project-arrow-link:hover {
+  background-color: #2f855a; /* Grün beim Hover (var(--color-green)) */
+}
+
+.project-arrow-link .arrow-icon {
+  transition: transform 0.3s ease; /* Sanfte Rotation */
+}
+
 .project-arrow-link:hover .arrow-icon {
-  transform: rotate(45deg);
-  stroke: black;
+  transform: rotate(45deg); /* 45 Grad Drehung beim Hover */
 }
 </style>
