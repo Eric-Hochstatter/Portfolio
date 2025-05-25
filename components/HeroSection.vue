@@ -21,23 +21,25 @@
       </span>!
     </h1>
 
-    <p class="max-w-2xl text-xl font-medium text-gray-800 text-left leading-relaxed mt-32">
-      Ich studiere Interaktionsgestaltung an der Hochschule
-      für Gestaltung in Schwäbisch Gmünd. Besonders fasziniert
-      mich, wie Menschen mit neuen Technologien interagieren –
-      und dass ich diese Erlebnisse mitgestalten kann. Mein Fokus
-      liegt auf der Entwicklung durchdachter User Experiences.
-      Kreatives Tüfteln und das Lösen komplexer Aufgaben sind für
-      mich dabei nicht nur Herausforderung, sondern auch Antrieb.
-    </p>
+    <div class="flex justify-between items-end mt-40">
+      <p class="max-w-2xl text-xl font-medium text-gray-800 text-left leading-relaxed">
+        Ich studiere Interaktionsgestaltung an der Hochschule
+        für Gestaltung in Schwäbisch Gmünd. Besonders fasziniert
+        mich, wie Menschen mit neuen Technologien interagieren –
+        und dass ich diese Erlebnisse mitgestalten kann. Mein Fokus
+        liegt auf der Entwicklung durchdachter User Experiences.
+        Kreatives Tüfteln und das Lösen komplexer Aufgaben sind für
+        mich dabei nicht nur Herausforderung, sondern auch Antrieb.
+      </p>
 
-    <div class="mt-12 text-right">
-      <NuxtLink to="/about" class="learn-more-link inline-flex items-center text-green-700 hover:text-green-800 transition-all">
-        Learn more about me!
-        <svg class="ml-2 w-6 h-6 transition-all" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-        </svg>
-      </NuxtLink>
+      <div class="flex-shrink-0">
+        <NuxtLink to="/about" class="learn-more-link inline-flex items-center text-green-700 hover:text-green-800 transition-all">
+          Learn more about me!
+          <svg class="arrow-icon ml-2 w-6 h-6 transition-all" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </NuxtLink>
+      </div>
     </div>
   </section>
 </template>
@@ -139,20 +141,25 @@
   background-color: #1c5337;
 }
 
-/* Learn More Link Hover-Effekt */
+/* Learn More Link mit integriertem Pfeil */
 .learn-more-link {
   font-size: 1rem;
-  transition: font-size 0.3s, transform 0.3s;
+  transition: font-weight 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
 .learn-more-link:hover {
-  font-size: 1rem;
   font-weight: 500;
 }
 
-.learn-more-link:hover svg {
-  width: 1.75rem;
-  height: 1.75rem;
-  rotate: 45deg;
+/* Pfeil innerhalb des Links */
+.learn-more-link .arrow-icon {
+  transition: transform 0.3s ease;
+  flex-shrink: 0; /* Verhindert Größenänderung des SVGs */
+}
+
+.learn-more-link:hover .arrow-icon {
+  transform: rotate(45deg);
 }
 </style>

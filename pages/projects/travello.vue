@@ -181,15 +181,15 @@
   <div class="flex justify-between items-end">
     <div>
       <h2 class="text-5xl font-bold text-black">Nächstes Projekt</h2>
-      <h3 class="text-2xl font-medium text-green-700 mt-10">Celestial Bodies</h3>
-      <p class="text-lg text-gray-700 mt-2">Interaktives Ausstellungskonzept</p>
+      <h3 class="text-2xl font-bold text-green-700 mt-16">Celestial Bodies</h3>
+      <p class="text-lg text-black mt-2">Interaktives Ausstellungskonzept</p>
       
-      <!-- Tags -->
+      <!-- Tags
       <div class="flex gap-2 mt-4">
         <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Arduino</span>
         <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Interaction</span>
         <span class="bg-black text-white text-xs px-2 py-1 rounded-full">Exhibition</span>
-      </div>
+      </div> -->
     </div>
     <NuxtLink to="/projects/celestial-bodies" class="project-arrow-link text-white w-12 h-12 rounded-full transition flex items-center justify-center">
       <svg class="arrow-icon w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -312,6 +312,6 @@ const startVideo = () => {
 }
 
 .project-arrow-link:hover .arrow-icon {
-  transform: rotate(45deg); /* 45 Grad Drehung beim Hover */
+  transform: rotate(-45deg); /* 45 Grad Drehung beim Hover */
 }
 </style>
